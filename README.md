@@ -1,6 +1,6 @@
 # aws_wafv2_ip_set performance with IPv6 addresses
 
-`aws_wafv2_ip_set` is extremely slow to compare a large set of IPv6 addresses to the desired state. IPv4 addresses don't have this problem.
+`aws_wafv2_ip_set` is extremely slow to compare a large set of IPv6 addresses to the desired state. IPv4 addresses don't have this problem _(results roughly in line with the proposed config)_.
 
 Versions:
 
@@ -12,6 +12,8 @@ on linux_amd64
 + provider registry.terraform.io/hashicorp/github v5.39.0
 + provider registry.terraform.io/hashicorp/random v3.5.1
 ```
+
+This repository shows an example of how to work around this by ignoring changes to the addresses.
 
 ## Setup
 
